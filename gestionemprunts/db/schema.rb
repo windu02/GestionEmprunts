@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140108160310) do
+ActiveRecord::Schema.define(version: 20140108213551) do
 
   create_table "complexdates", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "request_id"
     t.integer  "complexdatetype_id"
+    t.date     "cdate"
+    t.time     "beginhour"
+    t.time     "endhour"
+    t.time     "precisehour"
   end
 
   create_table "complexdatetypes", force: true do |t|
@@ -38,6 +42,17 @@ ActiveRecord::Schema.define(version: 20140108160310) do
     t.datetime "updated_at"
     t.integer  "materialgroup_id"
     t.integer  "materialstatus_id"
+    t.string   "materialtype"
+    t.string   "os"
+    t.string   "name"
+    t.string   "version"
+    t.integer  "memory"
+    t.integer  "ram"
+    t.float    "processorfrequency"
+    t.string   "serialnumber"
+    t.date     "guaranteeend"
+    t.string   "anomaly"
+    t.string   "whobought"
   end
 
   create_table "materials_requests", id: false, force: true do |t|
@@ -54,6 +69,7 @@ ActiveRecord::Schema.define(version: 20140108160310) do
   create_table "privileges", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "label"
   end
 
   create_table "requests", force: true do |t|
@@ -61,6 +77,8 @@ ActiveRecord::Schema.define(version: 20140108160310) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "requeststatus_id"
+    t.string   "borrowmotive"
+    t.string   "refusalmotive"
   end
 
   create_table "requeststatuses", force: true do |t|
