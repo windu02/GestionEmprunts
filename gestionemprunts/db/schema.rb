@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140108213551) do
+ActiveRecord::Schema.define(version: 20140109093951) do
 
   create_table "complexdates", force: true do |t|
     t.datetime "created_at"
@@ -94,7 +94,7 @@ ActiveRecord::Schema.define(version: 20140108213551) do
     t.integer  "privilege_id"
     t.string   "firstname"
     t.string   "lastname"
-    t.string   "password"
+    t.string   "hashed_password"
   end
 
   create_table "users_materialgroups", id: false, force: true do |t|

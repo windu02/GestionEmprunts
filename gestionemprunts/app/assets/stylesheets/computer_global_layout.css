@@ -1,0 +1,134 @@
+/*
+*	The main layout of the application
+*/
+.notice
+{
+	background-color: white;
+	top:0;
+	width:100%;
+	position:fixed;
+	text-align:center;
+	opacity: .8;
+	z-index:100000;
+}
+
+* {
+	font-family: "Myriad Web Pro",Helvetica,Arial,sans-serif;
+	letter-spacing: 1px;
+	color: #333333;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+section > header, aside > header {
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+body, html {
+	width:100%;
+	height:100%;
+	//background-color: yellow;
+}
+
+.wrapper {
+	position:relative;
+	height:100%;
+}
+
+#user_actions  {
+	top: 0;
+	position:relative;
+	text-align:right;
+	background-color: white;
+}
+
+
+#user_actions  > a{
+	color:#D95E16; 
+	padding:0 2px; 
+	text-decoration:none;
+}
+
+/*
+***********************************************************
+********************	HEADER     ************************
+***********************************************************
+*/
+body > header
+{
+	background-color: #a3e8ff;
+	top:0;
+	width:100%;
+	display:inline-block;
+	
+}
+
+body > header > h1 
+{
+	text-align:center;
+}
+
+
+/*
+****************************************************************
+********************	LEFT COLUMN     ************************
+****************************************************************
+*/
+#left_column
+{
+	background-color: #ff5151;
+	width:25%;
+	display:inline-block;
+	left:0;
+	float:left;
+}
+
+/*
+*****************************************************************
+********************	MAIN CONTENT     ************************
+*****************************************************************
+*/
+#main_content
+{
+	background-color:#a2ff51;
+	width:75%;
+	display:inline-block;
+}
+
+
+/*
+*********************************************************
+********************	MENU     ************************
+*********************************************************
+*/
+#top_content > nav 
+{
+	margin:1em;
+}
+
+nav > a
+{
+	display:block;
+	color:green;
+}
+
+
+/*
+***************************************************************
+********************	DESCRIPTIF     ************************
+***************************************************************
+*/
+#bottom_content > p 
+{
+	margin:1em;
+}
+
+
+
+
