@@ -16,7 +16,7 @@
 	<% if logged_in? %>	
 		<nav>
 			<%= link_to 'Gérer les demandes', root_path %> |
-			<%= link_to 'Faire une demande', root_path %> |
+			<%= link_to 'Faire une demande', new_request_path %> |
 			<%= link_to 'Etat du stock', root_path %> |
 			<%= link_to 'Matériel', root_path %> |
 			<div id="user_actions">
@@ -33,8 +33,7 @@
 </header>
 
 <section id="main_content" class="wrapper">
-	<header> Main Content </header>
-	<%=yield%>
+	<%= yield %>
 </section>
 
 </body>
