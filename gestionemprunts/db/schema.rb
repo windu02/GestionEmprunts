@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140109093951) do
+ActiveRecord::Schema.define(version: 20140110081533) do
 
   create_table "complexdates", force: true do |t|
     t.datetime "created_at"
@@ -42,13 +42,6 @@ ActiveRecord::Schema.define(version: 20140109093951) do
     t.datetime "updated_at"
     t.integer  "materialgroup_id"
     t.integer  "materialstatus_id"
-    t.string   "materialtype"
-    t.string   "os"
-    t.string   "name"
-    t.string   "version"
-    t.integer  "memory"
-    t.integer  "ram"
-    t.float    "processorfrequency"
     t.string   "serialnumber"
     t.date     "guaranteeend"
     t.string   "anomaly"
@@ -83,6 +76,18 @@ ActiveRecord::Schema.define(version: 20140109093951) do
 
   create_table "requeststatuses", force: true do |t|
     t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "technicalfeatures", force: true do |t|
+    t.string   "materialtype"
+    t.string   "os"
+    t.string   "name"
+    t.string   "version"
+    t.integer  "memory"
+    t.integer  "ram"
+    t.float    "processorfrequency"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
