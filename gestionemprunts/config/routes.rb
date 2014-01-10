@@ -4,4 +4,6 @@ Gestionemprunts::Application.routes.draw do
 	resource :session, :only => [:new, :create, :destroy]
 	get '/login' => "sessions#new", :as => "login"
 	get '/logout' => "sessions#destroy", :as => "logout"
+	
+	resources :complexdates
 end
