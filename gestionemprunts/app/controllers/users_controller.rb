@@ -25,10 +25,10 @@ class UsersController < ApplicationController
 	
 	def update
 		@user = current_user
-		if @user.update(user_params)
+		if @user.update_attributes(user_params)
 		  redirect_to users_path, notice: 'Updated user information successfully.'
 		else
-		  render action: 'edit'
+		  redirect_to users_path, notice: 'User has not been updated.'
 		end
 	end
 	
