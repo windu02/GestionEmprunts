@@ -1,0 +1,14 @@
+<%= div_for complexdate do %>
+  
+  <em>
+	<%= simple_format complexdate.cdate.to_s() %>
+  </em>
+	<%= simple_format complexdate.beginhour.to_s() %>
+	
+	<%= simple_format complexdate.endhour.to_s() %>
+	
+	<%= simple_format complexdate.precisehour.to_s() %>
+
+  <%= link_to "Edit", edit_complexdate_path(complexdate) %>
+  
+<% end %>
