@@ -6,4 +6,6 @@ Gestionemprunts::Application.routes.draw do
 	get '/logout' => "sessions#destroy", :as => "logout"
 	
 	resources :complexdates
+	resources :technicalfeatures
+	resources :materials
 end
