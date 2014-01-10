@@ -11,44 +11,43 @@
 <%= content_tag :p, notice, :class => 'notice' if notice.present? %>
 <%= content_tag :p, alert, :class => 'alert' if alert.present? %>
 
-<!--
 <header>
 	<h1> Emprunts de mat&eacute;riel | Polytech Nice-Sophia </h1>
+	<% if logged_in? %>	
+		<nav>
+			<%= link_to 'Gérer les demandes', root_path %> |
+			<%= link_to 'Faire une demande', root_path %> |
+			<%= link_to 'Etat du stock', root_path %> |
+			<%= link_to 'Matériel', root_path %> |
+			<div id="user_actions">
+				<%= link_to "Logout", logout_path %>
+			</div>
+		</nav>
+	<% end %>
 </header>
--->
 
 
-<% if logged_in? %>
+<% if logged_in? %>	
+	<aside id="left_column" class="wrapper">
 	
-	<section id="left_column" class="wrapper">
-		<section id="top_content">
-			<header> Menu </header>
-			<nav>
-				<%= link_to 'Gérer les demandes', root_path %>
-				<%= link_to 'Faire une demande', root_path %>
-				<%= link_to 'Etat du stock', root_path %>
-				<%= link_to 'Matériel', root_path %>
-			</nav>
-		</section>
-
-		<aside id="bottom_content">
-			<header> iPad Air </header>
-			<p>Batterie au lithium-polymère rechargeable intégrée de 32,4 Wh
-			Jusqu’à 10 heures d’autonomie pour naviguer sur Internet en WiFi, regarder des vidéos ou écouter de la musique
-			Jusqu’à 9 heures d’autonomie pour naviguer sur Internet via un réseau de données cellulaires
-			Recharge via l’adaptateur secteur ou le port USB d’un ordinateur</p>
-		</aside>
-		
-		<div id="user_actions">
-			<%= link_to "Logout", logout_path %>
-		</div>
+		<%= render current_user %>
+		<header> iPad Air </header>
+		<p>Batterie au lithium-polymère rechargeable intégrée de 32,4 Wh
+		Jusqu’à 10 heures d’autonomie pour naviguer sur Internet en WiFi, regarder des vidéos ou écouter de la musique
+		Jusqu’à 9 heures d’autonomie pour naviguer sur Internet via un réseau de données cellulaires
+		Recharge via l’adaptateur secteur ou le port USB d’un ordinateur</p>
+	</aside>
+	<section id="main_content" class="wrapper">
+		<header> Main Content </header>
 	</section>
-<% end %>
 
-<section id="main_content" class="wrapper">
-	<header> Main Content </header>
-	<%= yield %>
-</section>
+<% else %>
+	<section id="main_content" class="wrapper">
+		<header> Main Content </header>
+		<%= yield %>
+	</section>	
+	
+<% end %>
 
 </body>
 </html>
