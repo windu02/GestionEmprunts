@@ -7,4 +7,5 @@ class Material < ActiveRecord::Base
 	
 	belongs_to :materialgroup
 	belongs_to :materialstatus
+	belongs_to :technicalfeature
 end
