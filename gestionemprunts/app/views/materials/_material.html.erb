@@ -1,0 +1,7 @@
+<%= div_for material do %>
+  
+	<div class="material"> <div class="labelmaterial">Serial number </div> <%= simple_format material.serialnumber %> </div>
+	<div class="material"> <div class="labelmaterial">Guarantee end </div> <%= simple_format material.guaranteeend.to_s() %> </div>
+  	<div class="material"> <div class="labelmaterial">Who bought </div> <%= simple_format material.whobought %> </div>
+	
+<% end %>
