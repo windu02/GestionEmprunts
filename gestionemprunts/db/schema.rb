@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140110081533) do
+ActiveRecord::Schema.define(version: 20140111114431) do
 
   create_table "complexdates", force: true do |t|
     t.datetime "created_at"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20140110081533) do
     t.date     "guaranteeend"
     t.string   "anomaly"
     t.string   "whobought"
+    t.integer  "technicalfeature_id"
   end
 
   create_table "materials_requests", id: false, force: true do |t|
