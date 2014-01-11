@@ -16,25 +16,39 @@
 	<% if logged_in? %>	
 		<nav>
 			<%= link_to 'Gérer les demandes', root_path %> |
-			<%= link_to 'Faire une demande', new_request_path %> |
+			<%= link_to 'Faire une demande', root_path %> |
 			<%= link_to 'Etat du stock', root_path %> |
 			<%= link_to 'Matériel', root_path %> |
 			<div id="user_actions">
 				<%= link_to "Logout", logout_path %>
 			</div>
 		</nav>
-	<% else %>
-		<nav>
-			<div id="user_actions">
-				<%= link_to "Login", login_path %>
-			</div>
-		</nav>
 	<% end %>
 </header>
 
-<section id="main_content" class="wrapper">
-	<%= yield %>
-</section>
+
+<% if logged_in? %>	
+	<aside id="left_column" class="wrapper">
+	
+		<%= render current_user %>
+		<header> iPad Air </header>
+		<p>Batterie au lithium-polymère rechargeable intégrée de 32,4 Wh
+		Jusqu’à 10 heures d’autonomie pour naviguer sur Internet en WiFi, regarder des vidéos ou écouter de la musique
+		Jusqu’à 9 heures d’autonomie pour naviguer sur Internet via un réseau de données cellulaires
+		Recharge via l’adaptateur secteur ou le port USB d’un ordinateur</p>
+	</aside>
+	<section id="main_content" class="wrapper">
+		<header> Main Content </header>
+		<%=yield%>
+	</section>
+
+<% else %>
+	<section id="main_content" class="wrapper">
+		<header> Main Content </header>
+		<%= yield %>
+	</section>	
+	
+<% end %>
 
 </body>
 </html>

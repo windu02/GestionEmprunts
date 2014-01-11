@@ -8,4 +8,5 @@ Gestionemprunts::Application.routes.draw do
 	resources :complexdates
 	resources :technicalfeatures
 	resources :materials
+	resources :requests
 end
