@@ -8,17 +8,17 @@ class User < ActiveRecord::Base
 	attr_accessor :password
 
 	# Global validation
-	validates_presence_of :firstname, :lastname, :email, :password
+	validates_presence_of :firstname, :lastname, :email
 	
 	# Email validations
 	validates_uniqueness_of :email
 	validates_length_of :email, :within => 5..50
 	validates_format_of :email, :with =>  /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	
-	# Password validations
+	# Password validation
 	validates_confirmation_of :password
-	validates_length_of :password, :within => 4..20
-	validates_presence_of :password, :if => :password_required?
+	# validates_length_of :password, :within => 4..20
+	# validates_presence_of :password, :if => :password_required?
 
 	# Relations
 	belongs_to :privilege

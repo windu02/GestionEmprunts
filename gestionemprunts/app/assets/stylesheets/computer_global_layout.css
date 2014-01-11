@@ -19,7 +19,7 @@
 }
 
 h1 {
-	font-size: 4em;
+	font-size: 3em;
 }
 
 section > header, aside > header {
@@ -33,12 +33,11 @@ h3 {
 body, html {
 	width:100%;
 	height:100%;
-	//background-color: yellow;
 }
 
 .wrapper {
 	position:relative;
-	height:100%;
+	//height:100%;
 }
 
 #user_actions  {
@@ -52,7 +51,6 @@ body, html {
 #user_actions  > a{
 	color:#D95E16; 
 	padding:0 2px; 
-	text-decoration:none;
 }
 
 /*
@@ -65,13 +63,28 @@ body > header
 	background-color: #a3e8ff;
 	top:0;
 	width:100%;
-	display:inline-block;
-	
+	display:table-cell;
+	vertical-align:middle;
 }
 
 body > header > h1 
 {
-	text-align:center;
+	display: inline-block;
+	background-color: green;
+}
+
+body > header > nav 
+{
+	display: inline-block;
+	background-color: purple;
+	color: white;
+}
+
+body > header > nav *
+{
+	color: white;
+	display: inline-block;
+	text-decoration:none;
 }
 
 
@@ -89,6 +102,11 @@ body > header > h1
 	float:left;
 }
 
+#left_column > *
+{
+	margin:1em;
+}
+
 /*
 *****************************************************************
 ********************	MAIN CONTENT     ************************
@@ -102,32 +120,6 @@ body > header > h1
 }
 
 
-/*
-*********************************************************
-********************	MENU     ************************
-*********************************************************
-*/
-#top_content > nav 
-{
-	margin:1em;
-}
-
-nav > a
-{
-	display:block;
-	color:green;
-}
-
-
-/*
-***************************************************************
-********************	DESCRIPTIF     ************************
-***************************************************************
-*/
-#bottom_content > p 
-{
-	margin:1em;
-}
 
 
 
