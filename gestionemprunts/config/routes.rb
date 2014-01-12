@@ -9,4 +9,5 @@ Gestionemprunts::Application.routes.draw do
 	resources :technicalfeatures
 	resources :materials
 	resources :requests
+	resources :materialgroups
 end

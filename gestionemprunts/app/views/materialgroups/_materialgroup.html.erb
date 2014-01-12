@@ -1,0 +1,12 @@
+<%= div_for materialgroup do %>
+  
+	<div class="group"> <div class="groupfeature">Label : </div>	<%= simple_format materialgroup.label %> </div>
+
+
+	<div class="group"> <div class="groupfeature">Site : </div>	<%= simple_format materialgroup.site %> </div>
+
+	
+	<%= link_to "Edit", edit_materialgroup_path(materialgroup) %>
+	<%= link_to 'Destroy', materialgroup, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+<% end %>
