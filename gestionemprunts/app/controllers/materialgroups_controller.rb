@@ -34,12 +34,9 @@ class MaterialgroupsController < ApplicationController
     end    
   end
   
-  def destroy
-    @materialgroup = Materialgroup.find(params[:id])
-    @materialgroup.destroy
-    
-    redirect_to materialgroups_url
-  end
+
+
+
   
   private
   
