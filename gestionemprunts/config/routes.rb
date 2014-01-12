@@ -1,5 +1,5 @@
 Gestionemprunts::Application.routes.draw do
-	root :to => "users#index"
+	root :to => "requests#new"
 	resources :users
 	resource :session, :only => [:new, :create, :destroy]
 	get '/login' => "sessions#new", :as => "login"

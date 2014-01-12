@@ -1,38 +1,58 @@
-﻿// Place all the styles related to the requests controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-#new_request
+﻿#new_request
 {
-	//position:relative;
-	width:100%;
+	width:75%;
+	display:inline-block;
+	vertical-align:top;
 	height:100%;
+	position:absolute;
 }
 
+/*
+************************************************************
+********************	TOP ROW     ************************
+************************************************************
+*/
 #top_row
 {
-	height:50%;
+	height:30%;
+	background-color:grey;
 }
 
-#bottom_row
+#top_row > *
 {
-	height:50%;
+	height:100%;
+	display:inline-block;
 }
 
 #material_type 
 {
-	width:20%;
+	display:inline-block;
 	background-color:blue;
+	vertical-align:top;
+}
+
+#material_type > input
+{
+	display:block;
 }
 
 #shopping_cart
 {
-	width:80%;
 	background-color:yellow;
+}
+
+/*
+***************************************************************
+********************	BOTTOM ROW     ************************
+***************************************************************
+*/
+#bottom_row
+{
+	height:70%;
+	background-color:orange;
 }
 
 #material_list_view 
 {
-	width:100%;
 	background-color:pink;
 }
