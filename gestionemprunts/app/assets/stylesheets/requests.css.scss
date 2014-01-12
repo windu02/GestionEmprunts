@@ -14,6 +14,7 @@
 */
 #top_row
 {
+	position:relative;
 	height:30%;
 	background-color:grey;
 }
@@ -26,9 +27,8 @@
 
 #material_type 
 {
-	display:inline-block;
 	background-color:blue;
-	vertical-align:top;
+	width:50%;
 }
 
 #material_type > input
@@ -39,6 +39,8 @@
 #shopping_cart
 {
 	background-color:yellow;
+	width:50%;
+	
 }
 
 /*

@@ -16,3 +16,31 @@
 {
 	margin:1em;
 }
+
+#left_column > article
+{
+	position:relative;
+	height:50%;
+}
+
+#left_column > article > p
+{
+	position:relative;
+	height:100%;
+	padding-right:4px;
+}
+
+#left_column > article > header
+{
+	font-size:2em;
+}
+
+#user_actions  {
+	position:relative;
+}
+
+#user_actions  > a{
+	color:white;
+	top:0;
+	vertical-align:top;
+}
