@@ -1,4 +1,7 @@
 Gestionemprunts::Application.routes.draw do
+  get "materialtypes/index"
+  get "materialtypes/new"
+  get "materialtypes/show"
 	root :to => "requests#new"
 	resources :users
 	resource :session, :only => [:new, :create, :destroy]
@@ -10,4 +13,5 @@ Gestionemprunts::Application.routes.draw do
 	resources :materials
 	resources :requests
 	resources :materialgroups
+	resources :materialtypes
 end
