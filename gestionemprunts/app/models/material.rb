@@ -8,4 +8,6 @@ class Material < ActiveRecord::Base
 	belongs_to :materialgroup
 	belongs_to :materialstatus
 	belongs_to :technicalfeature
+	
+	belongs_to :type, :through=>:technicalfeature, :source=>:materialtype
 end
