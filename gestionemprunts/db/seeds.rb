@@ -15,3 +15,4 @@ alexis = User.create :firstname => 'Alexis', :lastname => 'Laurent', :email => '
 feature1 = Technicalfeature.create :materialtype => 'Tablette', :os => 'Android', :name => 'Acer', :version => '2.4', :memory => '250', :ram => '8', :processorfrequency => '2.4' 
 mat1 = Material.create :serialnumber => 'JHFUER879GEDFE', :guaranteeend => Date.today, :anomaly => 'Aucune', :whobought => 'Nobody'
 mat1.technicalfeature = feature1
+mat1.save
