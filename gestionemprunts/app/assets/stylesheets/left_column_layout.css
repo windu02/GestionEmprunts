@@ -17,6 +17,13 @@
 	margin:1em;
 }
 
+#shopping_cart
+{
+	position:relative;
+	height:50%;
+	background-color:yellow;
+}
+/*
 #left_column > article
 {
 	position:relative;
@@ -34,7 +41,7 @@
 {
 	font-size:2em;
 }
-
+*/
 #user_actions  {
 	position:relative;
 }
