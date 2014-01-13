@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140111114431) do
+ActiveRecord::Schema.define(version: 20140113132121) do
 
   create_table "complexdates", force: true do |t|
     t.datetime "created_at"
@@ -55,6 +55,12 @@ ActiveRecord::Schema.define(version: 20140111114431) do
   end
 
   create_table "materialstatuses", force: true do |t|
+    t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "materialtypes", force: true do |t|
     t.string   "label"
     t.datetime "created_at"
     t.datetime "updated_at"
