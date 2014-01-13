@@ -1,4 +1,4 @@
 class Materialtype < ActiveRecord::Base
 
-	has_many: technicalfeatures
+	has_many :technicalfeatures
 end
