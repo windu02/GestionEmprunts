@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140113132121) do
+ActiveRecord::Schema.define(version: 20140113134735) do
 
   create_table "complexdates", force: true do |t|
     t.datetime "created_at"
@@ -88,7 +88,6 @@ ActiveRecord::Schema.define(version: 20140113132121) do
   end
 
   create_table "technicalfeatures", force: true do |t|
-    t.string   "materialtype"
     t.string   "os"
     t.string   "name"
     t.string   "version"
@@ -97,6 +96,7 @@ ActiveRecord::Schema.define(version: 20140113132121) do
     t.float    "processorfrequency"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "materialtype"
   end
 
   create_table "users", force: true do |t|
