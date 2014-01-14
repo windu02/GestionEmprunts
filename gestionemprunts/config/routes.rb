@@ -1,7 +1,5 @@
 Gestionemprunts::Application.routes.draw do
-  get "materialtypes/index"
-  get "materialtypes/new"
-  get "materialtypes/show"
+	get "materials/by_type", :controller=>"materials", :action=>"by_type"
 	root :to => "requests#new"
 	resources :users
 	resource :session, :only => [:new, :create, :destroy]
