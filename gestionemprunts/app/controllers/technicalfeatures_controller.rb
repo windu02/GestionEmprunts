@@ -84,7 +84,7 @@ class TechnicalfeaturesController < ApplicationController
   
   private
   
-  def technicalfeature_params
-    params.require(:technicalfeature).permit(:materialtype, :os, :name, :version, :memory, :ram, :processorfrequency)
-  end
+    def technicalfeature_params
+      params.require(:technicalfeature).permit(:materialtype, :os, :name, :version, :memory, :ram, :processorfrequency)
+    end
 end
