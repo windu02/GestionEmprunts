@@ -1,5 +1,6 @@
 <%= div_for material do %>
-	<div class="material"><%= simple_format material.type.label %> </div>
-	<div class="material"><%= simple_format material.technicalfeature.name %> </div>
+	<div><%= simple_format material.type.label %> </div>
+	<div><%= simple_format material.technicalfeature.name %> </div>
+	<div><%= simple_format material.technicalfeature.os %> </div>
 <% end %>
 

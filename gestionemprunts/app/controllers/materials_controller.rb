@@ -16,10 +16,10 @@ class MaterialsController < ApplicationController
     @material = Material.find(params[:id])
   end  
   
-  def by_type
+  # def by_type
 	# id = 8
 	# materialtype = Materialtype.find(id)
 	# @materials = materialtype.associated_materials
 	# render :layout=>false
-  end
+ # end
 end

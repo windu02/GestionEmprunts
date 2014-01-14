@@ -19,8 +19,10 @@ type2 = Materialtype.create :label=>'Ordinateur'
 type2.save
 
 feature1 = Technicalfeature.create :os => 'Android', :name => 'Acer', :version => '2.4', :memory => '250', :ram => '8', :processorfrequency => '2.4', :materialtype => type1
-mat1 = Material.create :serialnumber => 'JHFUER879GEDFE', :guaranteeend => Date.today, :anomaly => 'Aucune', :whobought => 'Nobody', :technicalfeature => feature1
-mat1.save
+feature2 = Technicalfeature.create :os => 'iOS', :name => 'iPad', :version => '7.0.4', :memory => '64GB', :ram => '8', :processorfrequency => '2.4', :materialtype => type1
+
+mat1 = Material.create :serialnumber => 'JHFUER879GEDFE', :guaranteeend => Date.today, :anomaly => 'Aucune', :whobought => 'Polytech Nice', :technicalfeature => feature1
+mat2 = Material.create :serialnumber => 'JHFUER879GEDFF', :guaranteeend => Date.today, :anomaly => 'Aucune', :whobought => 'Polytech Nice', :technicalfeature => feature2
 
 compldatetype1 = Complexdatetype.create :label => 'RDV'
 compldatetype1.save

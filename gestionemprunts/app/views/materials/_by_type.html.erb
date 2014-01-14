@@ -1,10 +1,13 @@
 <h3> Mat&eacute;riel class&eacute; par type </h3>
 
 <% 
-	id = ids.first
-	materialtype = Materialtype.find(id)
-	materials = materialtype.associated_materials
+	ids.each do |id|
+		materialtype = Materialtype.find_by_id(id)
+		if materialtype != nil
+			materials = materialtype.associated_materials
 %>
-<article id="materials">
-  <%= render materials %>
-</article>
+			<article id="materials">
+				<%= render materials %>
+			</article>
+		<% end %>	
+	<% end %>
