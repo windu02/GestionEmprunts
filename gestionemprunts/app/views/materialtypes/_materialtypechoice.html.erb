@@ -1,4 +1,3 @@
 <% Materialtype.all.each do |materialtype| %>
-<div class="materialtypechoice"> <%= check_box_tag materialtype.id %> 
-	<%=  materialtype.label %> </div>
+<section class="materialtypechoice"> <%= check_box_tag materialtype.id %> <div> <%=  materialtype.label %> </div> </section>
 <% end %>

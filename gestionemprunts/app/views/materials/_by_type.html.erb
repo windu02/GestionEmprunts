@@ -4,10 +4,15 @@
 			materialtype = Materialtype.find_by_id(id)
 			if materialtype != nil
 				materials = materialtype.associated_materials
+				if materials.length > 0
 %>
-			<article id="materials">
-				<%= render materials %>
-			</article>
+				<article class="materials_article">
+					<h4> <%= materialtype.label %> </h4>
+					<section class="materials scrollable">
+						<%= render materials %>
+					</section>
+				</article>
+				<% end %>
 			<% end %>	
 		<% end %>	
 	<% end %>

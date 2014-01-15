@@ -20,9 +20,15 @@ type2.save
 
 feature1 = Technicalfeature.create :os => 'Android', :name => 'Acer', :version => '2.4', :memory => '250', :ram => '8', :processorfrequency => '2.4', :materialtype => type1
 feature2 = Technicalfeature.create :os => 'iOS', :name => 'iPad', :version => '7.0.4', :memory => '64GB', :ram => '8', :processorfrequency => '2.4', :materialtype => type1
+feature3 = Technicalfeature.create :os => 'Windows', :name => 'Toshiba Satellite', :version => '8.1', :memory => '1TO', :ram => '6', :processorfrequency => 'Non-connue', :materialtype => type2
 
 mat1 = Material.create :serialnumber => 'JHFUER879GEDFE', :guaranteeend => Date.today, :anomaly => 'Aucune', :whobought => 'Polytech Nice', :technicalfeature => feature1
 mat2 = Material.create :serialnumber => 'JHFUER879GEDFF', :guaranteeend => Date.today, :anomaly => 'Aucune', :whobought => 'Polytech Nice', :technicalfeature => feature2
+mat3 = Material.create :serialnumber => 'JHFUER879GEE00', :guaranteeend => Date.today, :anomaly => 'Aucune', :whobought => 'Polytech Nice', :technicalfeature => feature3
+
+(0..9).each do |i|
+	Material.create :serialnumber => 'JHFUER879GEE0'+i.to_s(), :guaranteeend => Date.today, :anomaly => 'Aucune', :whobought => 'Polytech Nice', :technicalfeature => feature1
+end
 
 compldatetype1 = Complexdatetype.create :label => 'RDV'
 compldatetype1.save
