@@ -64,7 +64,7 @@
 	height:100%;
 }
 
-#material_list_view > .materials_article
+#material_list_view > .materials_column
 {
 	position:relative;
 	display: inline-block;
@@ -72,25 +72,41 @@
 	height:100%;
 }
 
-#material_list_view > .materials_article > h4
+#material_list_view > .materials_column > h3
 {
 	position:relative;
-	font-size:1.1em;
 	font-weight:bold;
 	height:8%;
 }
 
-#material_list_view > .materials_article > .materials
+#material_list_view > .materials_column > .materials
 {
 	position:relative;
 	padding:.5em;
 	height:92%;
 }
 
-#material_list_view > .materials_article > .materials > .material
+#material_list_view > .materials_column > .materials > .material
 {
 	padding:.3em 0 .3em 0;
 	cursor: pointer;
+}
+
+.material > *
+{
+	display:inline-block;
+	vertical-align:top;
+	display: table-cell;
+}
+
+.material > .quantity
+{
+	text-align:right;
+}
+
+.material > .quantity > *
+{
+	display:inline-block;
 }
 
 
