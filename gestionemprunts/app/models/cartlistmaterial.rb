@@ -1,6 +1,6 @@
 class Cartlistmaterial < ActiveRecord::Base
   
-  has_many :cartitems, :trough => :technicalfeatures, :source => :carts
-  has_many :technicalfeatures 
+  belongs_to :cart
+  belongs_to :technicalfeature
   
 end
