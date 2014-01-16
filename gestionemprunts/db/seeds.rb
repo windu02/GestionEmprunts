@@ -123,10 +123,10 @@ reqstat1.save
 reqstat2 = Requeststatus.create :label => 'Terminee'
 reqstat2.save
 
-reqstat3 = Requeststatus.create :label => 'Refusée'
+reqstat3 = Requeststatus.create :label => 'Refusee'
 reqstat3.save
 
-reqstat4 = Requeststatus.create :label => 'Validée'
+reqstat4 = Requeststatus.create :label => 'Validee'
 reqstat4.save
 
 reqstat5 = Requeststatus.create :label => 'En cours'
