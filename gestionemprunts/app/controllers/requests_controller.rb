@@ -5,4 +5,8 @@ class RequestsController < ApplicationController
 		
 	end
 	
+	def new2
+    
+  end
+	
 end
