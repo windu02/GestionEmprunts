@@ -1,4 +1,6 @@
 Gestionemprunts::Application.routes.draw do
+  resources :carts
+
 	get "materials/by_type", :controller=>"materials", :action=>"by_type"
 	root :to => "requests#new"
 	resources :users
