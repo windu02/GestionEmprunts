@@ -144,18 +144,22 @@ compldate1 = Complexdate.create :cdate => Date.new(2014, 01, 26), :beginhour => 
 ####################
 
 # Table technicalfeaturequantities
-techfeatq1 = Technicalfeaturequantity.create :borrowablequantity => '6', :technicalfeature => feature1
-techfeatq1.save
-techfeatq2 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature6
-techfeatq2.save
+techfeatq1 = Technicalfeaturequantity.create :borrowablequantity => '7', :technicalfeature => feature1
+techfeatq2 = Technicalfeaturequantity.create :borrowablequantity => '5', :technicalfeature => feature2
+techfeatq3 = Technicalfeaturequantity.create :borrowablequantity => '5', :technicalfeature => feature3
+techfeatq4 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature4
+techfeatq5 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature5
+techfeatq6 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature6
+techfeatq7 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature7
+techfeatq8 = Technicalfeaturequantity.create :borrowablequantity => '6', :technicalfeature => feature8
+techfeatq9 = Technicalfeaturequantity.create :borrowablequantity => '6', :technicalfeature => feature9
+techfeatq10 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature10
 
 ####################
 
 # Table carts
 cart1 = Cart.create
-cart1.save
 cart2 = Cart.create
-cart2.save
 
 ####################
 
