@@ -1,0 +1,42 @@
+<%= form_for(@technicalfeature) do |f| %>
+  <% if @technicalfeature.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@technicalfeature.errors.count, "error") %>
+prohibited this user from being saved:</h2>
+    <ul>
+    <% @technicalfeature.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+ 
+ <div class="field">
+    <%= f.label :os %><br />
+    <%= f.text_field :os %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br />
+    <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :memory %><br />
+    <%= f.text_field :memory %>
+  </div>
+    <div class="field">
+    <%= f.label :ram %><br />
+    <%= f.text_field :ram %>
+  </div>
+    <div class="field">
+    <%= f.label :processorfrequency %><br />
+    <%= f.text_field :processorfrequency %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

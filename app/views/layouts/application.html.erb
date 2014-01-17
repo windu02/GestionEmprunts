@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Emprunt de mat&eacute;riel</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= content_tag :p, notice, :class => 'notice' if notice.present? %>
+<%= content_tag :p, alert, :class => 'alert' if alert.present? %>
+
+<% if logged_in? %>	
+	<header>
+		<!--<h1> Emprunts de mat&eacute;riel | Polytech Nice-Sophia </h1>-->
+		
+			<nav id="main_menu">
+					<%= link_to 'Gérer les demandes', users_path %><!--
+					--><%= link_to 'Faire une demande', new_request_path %><!--
+					--><%= link_to 'Etat du stock', root_path %><!--
+					--><%= link_to 'Matériel', root_path %>
+			</nav>
+	</header>
+<% end %>
+
+<section id="main_content" class="wrapper" data-role="page">
+	<%= yield %>
+</section>
+
+</body>
+</html>

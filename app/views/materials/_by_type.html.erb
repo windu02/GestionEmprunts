@@ -1,0 +1,20 @@
+<% 
+	if @ids != nil
+		@ids.each do |id|
+			materialtype = Materialtype.find_by_id(id)			
+			if materialtype != nil
+				%>
+				<article class="materials_column">
+				<h3> <%= materialtype.label %> </h3>
+				<section class="materials">
+					<% materialtype.technicalfeatures.each do |tech| %>	
+						<article class="material">
+						<section class="detail"> <h4> <%= tech.name %> </h4> 
+						<h4> <%= tech.os %> <%= tech.version %></h4> </section>
+						<section class="quantity"> <%= link_to 'moins', '#' %> <h4> <%= tech.technicalfeaturequantity.borrowablequantity %> </h4> <%= link_to 'plus', '#' %> </section> </article><%
+					end
+				%></section></article><%
+			end
+		end
+	end
+%>

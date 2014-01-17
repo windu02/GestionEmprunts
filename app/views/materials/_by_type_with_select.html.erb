@@ -1,0 +1,24 @@
+<% 
+	if @ids != nil
+		@ids.each do |id|
+			materialtype = Materialtype.find_by_id(id)			
+			if materialtype != nil
+				%>
+				<article class="materials_column">
+				<h3> <%= materialtype.label %> </h3>
+				<section class="materials">
+					<% materialtype.technicalfeatures.each do |tech| %>	
+						<article class="material">
+						<h4> <%= tech.name %> </h4> 
+						<h4> <%= tech.os %> <%= tech.version %></h4> 
+						<% options = ""
+						(0..tech.materials.count).each do |i|
+							options += "<option>#{i}</option>"
+						end %>
+						<%= select_tag "count", options.html_safe %></article><%
+					end
+				%></section></article><%
+			end
+		end
+	end
+%>

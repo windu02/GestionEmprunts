@@ -1,0 +1,25 @@
+﻿<aside id="left_column" class="wrapper">
+	<section id="user_actions">
+		<%= render current_user %>
+		<%= link_to "Logout", logout_path %>
+	</section>
+	<section id="shopping_cart">
+		<h3> Panier </h3>
+	</section>
+</aside>
+<section id="new_request">
+	<section id="top_row">
+		<article id="material_type">
+			<h3> Informations </h3>
+			<%= select_tag(:motive, options_for_select([['Cours/TP', 1], ['Projet', 2]])) %>
+			<%= render 'complexdates/complexdate' %>
+		</article>
+	</section>
+	
+	<section id="bottom_row">
+		<!-- <h3> Mat&eacute;riel class&eacute; par type </h3> -->
+		<aside id="material_list_view">
+		</aside>
+	</section>
+
+</section>

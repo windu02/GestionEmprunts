@@ -1,0 +1,19 @@
+<%= div_for technicalfeature do %>
+  
+	<div class="feature"> <div class="labelfeature">OS : </div>	<%= simple_format technicalfeature.os %> </div>
+
+	<div class="feature"> <div class="labelfeature">Name : </div>	<%= simple_format technicalfeature.name %> </div>
+
+	<div class="feature"> <div class="labelfeature">Version :</div>	<%= simple_format technicalfeature.version%> </div>
+
+	<div class="feature"> <div class="labelfeature">Memory : </div>	<%= simple_format technicalfeature.memory.to_s() %> </div>
+
+	<div class="feature"> <div class="labelfeature">RAM :</div>	<%= simple_format technicalfeature.ram.to_s() %> </div>
+
+	<div class="feature"> <div class="labelfeature">Processor frequency : </div>	<%= simple_format technicalfeature.processorfrequency.to_s() %> </div>
+	
+  
+	<%= link_to "Edit", edit_technicalfeature_path(technicalfeature) %>
+	<%= link_to 'Destroy', technicalfeature, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+<% end %>

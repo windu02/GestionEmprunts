@@ -1,0 +1,24 @@
+<%= form_for(@complexdate) do |f| %>
+
+ <div class="field">
+    <%= f.label :cdate %><br />
+    <%= f.datetime_select :cdate %>
+  </div>
+  
+ <div class="field">
+    <%= f.label :beginhour %><br />
+    <%= f.time_field :beginhour %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :endhour %><br />
+    <%= f.time_field :endhour %>
+  </div>
+  <div class="field">
+    <%= f.label :precisehour %><br />
+    <%= f.time_field :precisehour %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
