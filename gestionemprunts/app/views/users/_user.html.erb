@@ -1,9 +1,0 @@
-<%= div_for user do %>
-  <h3>
-	<%= simple_format user.firstname %>
-  </h3>
-  
-  <%= simple_format user.email %>
-  <em><%= simple_format user.privilege.label %></em>
-  <!-- <%= link_to "Edit", edit_user_path(user, :format=>:js), :remote=>true, :id=>'edit_user_link' %> -->
-<% end %>
