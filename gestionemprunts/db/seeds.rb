@@ -141,3 +141,28 @@ req1 = Request.create :borrowmotive => 'Cours', :user => romain, :requeststatus 
 
 compldate1 = Complexdate.create :cdate => Date.new(2014, 01, 26), :beginhour => Time.now, :endhour => Time.now, :precisehour => Time.now, :request => req1, :complexdatetype => compldatetype1
 
+####################
+
+# Table technicalfeaturequantities
+techfeatq1 = Technicalfeaturequantity.create :borrowablequantity => '7', :technicalfeature => feature1
+techfeatq2 = Technicalfeaturequantity.create :borrowablequantity => '5', :technicalfeature => feature2
+techfeatq3 = Technicalfeaturequantity.create :borrowablequantity => '5', :technicalfeature => feature3
+techfeatq4 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature4
+techfeatq5 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature5
+techfeatq6 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature6
+techfeatq7 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature7
+techfeatq8 = Technicalfeaturequantity.create :borrowablequantity => '6', :technicalfeature => feature8
+techfeatq9 = Technicalfeaturequantity.create :borrowablequantity => '6', :technicalfeature => feature9
+techfeatq10 = Technicalfeaturequantity.create :borrowablequantity => '4', :technicalfeature => feature10
+
+####################
+
+# Table carts
+cart1 = Cart.create
+cart2 = Cart.create
+
+####################
+
+# Table cartlistmaterials
+
+cart1.cartlistmaterials.create :technicalfeature => feature1

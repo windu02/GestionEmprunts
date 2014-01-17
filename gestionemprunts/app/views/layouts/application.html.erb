@@ -15,18 +15,16 @@
 	<header>
 		<!--<h1> Emprunts de mat&eacute;riel | Polytech Nice-Sophia </h1>-->
 		
-			<nav>
-				<ul>
-					<li><%= link_to 'Gérer les demandes', root_path %></li><!--
-					--><li><%= link_to 'Faire une demande', new_request_path %></li><!--
-					--><li><%= link_to 'Etat du stock', root_path %></li><!--
-					--><li><%= link_to 'Matériel', root_path %></li>
-				</ul>
+			<nav id="main_menu">
+					<%= link_to 'Gérer les demandes', users_path %><!--
+					--><%= link_to 'Faire une demande', new_request_path %><!--
+					--><%= link_to 'Etat du stock', root_path %><!--
+					--><%= link_to 'Matériel', root_path %>
 			</nav>
 	</header>
 <% end %>
 
-<section id="main_content" class="wrapper">
+<section id="main_content" class="wrapper" data-role="page">
 	<%= yield %>
 </section>
 
