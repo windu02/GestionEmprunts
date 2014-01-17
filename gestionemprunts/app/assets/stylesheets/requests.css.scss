@@ -1,0 +1,112 @@
+﻿#new_request
+{
+	width:75%;
+	display:inline-block;
+	vertical-align:top;
+	height:100%;
+	position:absolute;
+}
+
+/*
+************************************************************
+********************	TOP ROW     ************************
+************************************************************
+*/
+#top_row
+{
+	position:relative;
+	height:30%;
+	background-color:grey;
+}
+
+#top_row > *
+{
+	height:100%;
+	display:inline-block;
+}
+
+#material_type 
+{
+	background-color:blue;
+	width:50%;
+}
+
+#material_type .materialtypechoice
+{
+	display:block;
+}
+
+#material_type .materialtypechoice > div
+{
+	display:inline-block;
+}
+
+/*
+***************************************************************
+********************	BOTTOM ROW     ************************
+***************************************************************
+*/
+#bottom_row *
+{
+	position: relative;
+}
+
+#bottom_row
+{
+	height:70%;
+	background-color:pink;
+}
+
+#material_list_view 
+{
+	position:relative;
+	background-color:orange;
+	height:100%;
+}
+
+#material_list_view > .materials_column
+{
+	position:relative;
+	display: inline-block;
+	vertical-align:top;
+	height:100%;
+}
+
+#material_list_view > .materials_column > h3
+{
+	position:relative;
+	font-weight:bold;
+	height:8%;
+}
+
+#material_list_view > .materials_column > .materials
+{
+	position:relative;
+	padding:.5em;
+	height:92%;
+}
+
+#material_list_view > .materials_column > .materials > .material
+{
+	padding:.3em 0 .3em 0;
+	cursor: pointer;
+}
+
+.material > *
+{
+	display:inline-block;
+	vertical-align:top;
+	display: table-cell;
+}
+
+.material > .quantity
+{
+	text-align:right;
+}
+
+.material > .quantity > *
+{
+	display:inline-block;
+}
+
+
