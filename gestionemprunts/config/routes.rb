@@ -8,6 +8,8 @@ Gestionemprunts::Application.routes.draw do
 	get '/login' => "sessions#new", :as => "login"
 	get '/logout' => "sessions#destroy", :as => "logout"
 	
+	get '/requests/newtwo' => "requests#newtwo"
+	
 	resources :complexdates
 	resources :technicalfeatures
 	resources :materials

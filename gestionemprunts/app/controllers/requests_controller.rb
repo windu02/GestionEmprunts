@@ -5,7 +5,7 @@ class RequestsController < ApplicationController
 		
 	end
 	
-	def new2
+	def newtwo
     
   end
 	
